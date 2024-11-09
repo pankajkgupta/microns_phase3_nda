@@ -15,6 +15,11 @@ import datajoint as dj
 # from pipeline import meso, experiment, stack
 # m65p3 = dj.create_virtual_module('microns_minnie65_02','microns_minnie65_02')
 
+dj.config["database.host"] = "db.datajoint.com"
+dj.config["database.user"] = "microns"
+dj.config["database.password"] = "microns2023"
+dj.config["custom"] = {"database.prefix": "microns_"}
+
 schema = dj.schema('microns_phase3_nda', create_tables=True)
 # schema.spawn_missing_classes()
 
